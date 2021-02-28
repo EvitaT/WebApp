@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter</title>
+    <style type="text/css">
+        body {
+            font-family: "bellefair";
+            color: navy;
+            font-size: 17pt;
+        }
+        .counter {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            grid-row-gap: 6px;
+            justify-content: center;
+            border: 5px solid;
+            border-image: linear-gradient(325deg, navy, gold) 1;
+            width: 250px;
+            margin: auto;
+            margin-top: 120px;
+            padding: 100px 0;
+        }
+        .total {
+            margin: 5px 0 10px 0;
+            width: 135px;
+        }
+            .total span {
+                background-color: gold;
+                display: inline-block;
+                margin-bottom: 3px;
+                padding: 3px;
+            }
+            .total a.btn {
+                color: black;
+                text-decoration: none;
+                user-select: none;
+                background: coral;
+                padding: 4px 25px;
+                outline: none;
+            }
+                .total a.btn:hover {
+                    background: lightsalmon;
+                }
+                .total a.btn:active {
+                    background: lightcoral;
+                }
+    </style>
+</head>
+<body>
+    <h1 align="center" style="font-size: 40px;">Counter</h1>
+    <div class="counter">
+        <div class="total">
+            <span>Clicked:</span>
+            <span id="counter">0</span><br><br><br><br>
+            <a href="#" class="btn" id="link">Click me</a>
+        </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+        var link = document.getElementById("link"),
+            counter = document.getElementById("counter"),
+            count = 0;
+        link.onclick = function () {
+            count++;
+            counter.textContent = count;
+        };
+    </script>
+</body>
+</html>
